@@ -1,0 +1,20 @@
+!!!
+%html
+%head
+  %title Forum
+  = csrf_meta_tags
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+%body
+  %header.main_header
+    #logo
+      %h1 Jays Forum
+    #button
+      = link_to "New Post", new_post_path
+
+  .wrapper
+    %p.notice= notice
+    %p.alert= alert
+
+  .wrapper
+    = yield
